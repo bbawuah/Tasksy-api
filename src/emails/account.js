@@ -23,8 +23,18 @@ const sendGoodbyeEmail = (email, name) => {
   });
 };
 
+const sendMeAnEmail = (name) => {
+  sgMail.send({
+    to: 'brianbawuah96@gmail.com',
+    from: 'brianbawuah@icloud.com',
+    subject: 'Someone created an account!',
+    text: `${name} created an account on Tasksy!`,
+  });
+};
+
 // Export de functions
 module.exports = {
   sendWelcomeEmail,
   sendGoodbyeEmail,
+  sendMeAnEmail,
 };
