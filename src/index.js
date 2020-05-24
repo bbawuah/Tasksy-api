@@ -27,6 +27,8 @@ const port = process.env.PORT || 8000;
 
 // Cookie parser
 
+
+
 const origin = process.env.UI_SERVER_ORIGIN || 'http://localhost:8080';
 
 app.use(cors({origin, credentials: true}));
