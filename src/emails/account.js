@@ -9,7 +9,7 @@ const sendWelcomeEmail = (email, name) => {
     to: email,
     from: 'brianbawuah@icloud.com',
     subject: 'Thanks for joining the Tasksy family!',
-    text: `Welcome to the the Tasksy family, ${name}. If you have any questions or tips, please don't hesitate to contact me.`,
+    text: `Welcome ${name}. If you have any questions or tips, please don't hesitate to contact me.`,
   });
 };
 
@@ -18,7 +18,7 @@ const sendGoodbyeEmail = (email, name) => {
   sgMail.send({
     to: email,
     from: 'brianbawuah@icloud.com',
-    subject: 'Thanks for using Tasksy application!',
+    subject: 'Thanks for using Tasksy!',
     text: `Do you have feedback for us ${name}?`,
   });
 };
