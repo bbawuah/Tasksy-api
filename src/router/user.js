@@ -5,7 +5,7 @@ const auth = require('../middleware/auth');
 // Requiring the auth function for the  middleware
 const router = new express.Router(); // Creating a new instance of the Express
 const multer = require('multer');
-const { sendWelcomeEmail, sendGoodbyeEmail, sendMeAnEmail } = require('../emails/account');
+const { sendWelcomeEmail, sendGoodbyeEmail } = require('../emails/account');
 
 // CREATING USERS SIGN UP
 router.post('/users', async (req, res) => {
@@ -16,7 +16,6 @@ router.post('/users', async (req, res) => {
     await user.save();
     // Send success email to user
     sendWelcomeEmail(user.email, user.name);
-    sendMeAnEmail(user.name);
     // Generating a token for the user
     const token = await user.generateAuthToken(
       req.body.email,
