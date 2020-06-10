@@ -1,5 +1,5 @@
 const express = require('express'); // Requiring the express framework
-const sharp = require('sharp');
+const sharp = require('sharp'); //Resizing images
 const User = require('../models/user'); // Requiring the Users model
 const auth = require('../middleware/auth');
 // Requiring the auth function for the  middleware

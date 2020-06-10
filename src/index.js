@@ -9,27 +9,6 @@ const taskRouter = require('./router/task');
 const app = express();
 const port = process.env.PORT || 8000;
 
-
-// Enable cors
-
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', 'http://http://localhost:8080'); // update to match the domain you will make the request from
-//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-//   next();
-// });
-
-
-// app.use(cors({
-//   origin: '*',
-//   credentials: true,
-//   allowedHeaders: 'X-Requested-With, Content-Type, Authorization',
-//   methods: 'GET, POST, PATCH, PUT, POST, DELETE, OPTIONS',
-// }));
-
-// Cookie parser
-
-
-
 const origin = process.env.UI_SERVER_ORIGIN || 'http://localhost:8080';
 
 app.use(sslRedirect());
