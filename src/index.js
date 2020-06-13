@@ -9,7 +9,7 @@ const taskRouter = require('./router/task');
 const app = express();
 const port = process.env.PORT || 8000;
 
-const origin = process.env.UI_SERVER_ORIGIN || 'http://localhost:8080';
+const origin =  process.env.UI_SERVER_ORIGIN || 'http://localhost:8080';
 
 app.use(sslRedirect());
 app.use(cors({origin, credentials: true}));
